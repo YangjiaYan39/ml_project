@@ -18,6 +18,8 @@ It integrates:
 - simple explainability for prediction results
 
 ---
+## Demo
+![alt text](image-1.png)
 
 ## Tech Stack
 
