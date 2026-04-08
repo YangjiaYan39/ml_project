@@ -5,6 +5,13 @@ End-to-end machine learning system with FastAPI backend and Streamlit frontend f
 This project demonstrates how to design a complete ML pipeline, evaluate multiple models, and deploy a real-time prediction service with an interactive frontend.
 
 ---
+## Key Contributions
+
+- Built an end-to-end ML system integrating training, evaluation, and deployment
+- Designed RESTful APIs using FastAPI for real-time prediction
+- Implemented 10-fold cross-validation to improve model reliability
+- Developed an interactive frontend using Streamlit for user-friendly interaction
+- Integrated model persistence and basic explainability for production-like workflow
 
 ## Demo
 
@@ -35,6 +42,9 @@ It integrates:
 - joblib
 
 ---
+## System Architecture
+
+Frontend (Streamlit) → FastAPI Backend → ML Model → Prediction Output
 
 ## Features
 
@@ -122,3 +132,4 @@ It integrates:
 - Integrated FastAPI backend with Streamlit frontend  
 - Implemented model persistence for efficient reuse  
 - Added simple explainability for better interpretability  
+- Designed the system with modular components for scalability and maintainability
