@@ -1,6 +1,6 @@
-# Loan Default Prediction System
+# ML Prediction API System
 
-An end-to-end machine learning application for predicting loan default risk, built with FastAPI and Streamlit.
+End-to-end machine learning system with FastAPI backend and Streamlit frontend for real-time prediction.
 
 This project demonstrates how to design a complete ML pipeline, evaluate multiple models, and deploy a real-time prediction service with an interactive frontend.
 
