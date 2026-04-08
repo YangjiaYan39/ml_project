@@ -2,7 +2,13 @@
 
 An end-to-end machine learning application for predicting loan default risk, built with FastAPI and Streamlit.
 
-This project demonstrates how to design a simple ML pipeline, evaluate multiple models, and deploy a real-time prediction service with an interactive frontend.
+This project demonstrates how to design a complete ML pipeline, evaluate multiple models, and deploy a real-time prediction service with an interactive frontend.
+
+---
+
+## Demo
+
+![App Screenshot](images/app.png)
 
 ---
 
@@ -18,8 +24,6 @@ It integrates:
 - simple explainability for prediction results
 
 ---
-## Demo
-![alt text](image-1.png)
 
 ## Tech Stack
 
@@ -34,7 +38,7 @@ It integrates:
 
 ## Features
 
-- Train multiple models and select the best one
+- Train multiple models and automatically select the best one
 - Compare model performance
 - Perform 10-fold cross-validation
 - Real-time prediction via API
@@ -45,21 +49,26 @@ It integrates:
 
 ## Project Structure
 
-- `main.py` — FastAPI entry point
-- `api.py` — API routes and prediction logic
-- `model.py` — data generation, preprocessing, and model setup
-- `app.py` — Streamlit frontend
-- `best_model.pkl` — saved trained model
-- `scaler.pkl` — saved scaler
+    ml_project/
+    │
+    ├── app.py              # Streamlit frontend
+    ├── api.py              # API routes
+    ├── main.py             # FastAPI entry point
+    ├── model.py            # ML pipeline
+    ├── best_model.pkl      # Saved model
+    ├── scaler.pkl          # Saved scaler
+    ├── images/
+    │   └── app.png         # Demo screenshot
+    └── README.md
 
 ---
 
 ## How It Works
 
-1. Generate customer data with features such as income, age, and credit score
-2. Split data into training and testing sets
+1. Generate customer data (income, age, credit score)
+2. Split into training and testing sets
 3. Apply feature scaling
-4. Train multiple models, including Logistic Regression and KNN
+4. Train multiple models (Logistic Regression, KNN)
 5. Evaluate performance and select the best model
 6. Save the trained model and scaler
 7. Serve predictions through FastAPI and Streamlit
@@ -68,36 +77,31 @@ It integrates:
 
 ## Running the Project
 
-Start the backend:
+### Start the backend
 
-`python -m uvicorn main:app --reload`
+    python -m uvicorn main:app --reload
 
-Start the frontend:
+### Start the frontend
 
-`python -m streamlit run app.py`
+    python -m streamlit run app.py
 
-Open API docs:
+### Open in browser
 
-http://127.0.0.1:8000/docs
-
-Open Streamlit app:
-
-http://localhost:8501
+- API docs: http://127.0.0.1:8000/docs  
+- App: http://localhost:8501  
 
 ---
 
 ## API Endpoints
 
-- `GET /train` — train models and save the best one
-- `GET /compare` — compare model performance
-- `GET /cv` — run 10-fold cross-validation
-- `POST /predict` — predict loan default risk
+- `GET /train` — train models and save the best one  
+- `GET /compare` — compare model performance  
+- `GET /cv` — run cross-validation  
+- `POST /predict` — predict loan default risk  
 
 ---
 
 ## Input Features
-
-The prediction uses:
 
 - `income`
 - `age`
@@ -105,24 +109,16 @@ The prediction uses:
 
 ---
 
-## Example Prediction Output
+## Example Output
 
-The system returns:
-
-- predicted class
-- risk label
-- simple explanation of the result
-
-Example:
-
-- Prediction: Low Risk
-- Reason: Financial profile looks stable
+- Prediction: Low Risk  
+- Reason: Financial profile looks stable  
 
 ---
 
 ## Highlights
 
-- Built a complete ML pipeline from preprocessing to deployment
-- Combined FastAPI backend with Streamlit frontend
-- Added model persistence for reuse after training
-- Included simple explainability to make prediction results easier to understand
+- Built a complete ML pipeline from preprocessing to deployment  
+- Integrated FastAPI backend with Streamlit frontend  
+- Implemented model persistence for efficient reuse  
+- Added simple explainability for better interpretability  
